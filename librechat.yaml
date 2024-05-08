@@ -47,24 +47,28 @@ endpoints:
   #   capabilities: ["code_interpreter", "retrieval", "actions", "tools", "image_vision"]
   azureOpenAI:
     # Endpoint-level configuration
-    titleModel: "llama-70b-chat"
+    titleModel: "gpt-4-0125-Preview"
     plugins: true
     assistants: true
+    titleConvo: true
     groups:
     # Group-level configuration
-    - group: "my-resource-westus"
-      apiKey: "WESTUS_API_KEY"  # ${WESTUS_API_KEY}
-      instanceName: "my-resource-westus"
-      version: "2024-03-01-preview"
+    - group: "my-resource-eastus"
+      apiKey: "77864c33a493405b91b4b70b56ae01cf"  # ${WESTUS_API_KEY}
+      instanceName: "tharuka-eastus"
+      version: "2024-03-01-preview"   #CHECK THIS
       # Model-level configuration
       models:
-        gpt-4-vision-preview:
-          deploymentName: gpt-4-vision-preview
-          version: "2024-03-01-preview"
-        gpt-3.5-turbo:
-          deploymentName: gpt-35-turbo
-        gpt-4-1106-preview:
-          deploymentName: gpt-4-1106-preview
+        default: [
+          "gpt-4-0125-Preview"
+          ]      
+        # gpt-4-vision-preview:
+        #   deploymentName: gpt-4-vision-preview
+        #   version: "2024-03-01-preview"
+        # gpt-3.5-turbo:
+        #   deploymentName: gpt-35-turbo
+        gpt-4-0125-Preview:
+          deploymentName: gpt4-125-eastus
     # Group-level configuration
     - group: "mistral-inference"
       apiKey: "AZURE_MISTRAL_API_KEY"   #${AZURE_MISTRAL_API_KEY}
