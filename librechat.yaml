@@ -57,7 +57,7 @@ endpoints:
     - group: "eastus"
       apiKey: "77864c33a493405b91b4b70b56ae01cf"  # ${WESTUS_API_KEY}
       instanceName: "tharuka-eastus"
-      version: "2024-03-01-preview"   #CHECK THIS
+      version: "2024-03-01-preview"   #he Azure OpenAI API version https://learn.microsoft.com/en-us/azure/ai-services/openai/reference#:~:text=MM%2DDD%20format.-,Supported%20versions,-2022%2D12%2D01
       # Model-level configuration
       models:      
         # gpt-4-vision-preview:
@@ -83,8 +83,8 @@ endpoints:
         gpt-35-turbo:
           deploymentName: gpt35-turbo-default
 
-        dall-e-3:
-          deploymentName: Dalle3
+        # dall-e-3:
+        #   deploymentName: Dalle3
 
   custom:
     # Groq Example
