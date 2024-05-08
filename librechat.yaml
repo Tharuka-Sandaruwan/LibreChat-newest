@@ -45,15 +45,16 @@ endpoints:
   #   retrievalModels: ["gpt-4-turbo-preview"]
   #   # (optional) Assistant Capabilities available to all users. Omit the ones you wish to exclude. Defaults to list below.
   #   capabilities: ["code_interpreter", "retrieval", "actions", "tools", "image_vision"]
+
   azureOpenAI:
-    # Endpoint-level configuration
+    # Endpoint-level configuration for Azure OpenAI
     titleModel: "gpt-4-0125-Preview"
     plugins: true
     assistants: true
     titleConvo: true
     groups:
-    # Group-level configuration
-    - group: "my-resource-eastus"
+    # Group-level configuration for eastus
+    - group: "eastus"
       apiKey: "77864c33a493405b91b4b70b56ae01cf"  # ${WESTUS_API_KEY}
       instanceName: "tharuka-eastus"
       version: "2024-03-01-preview"   #CHECK THIS
@@ -66,25 +67,21 @@ endpoints:
         #   deploymentName: gpt-35-turbo
         gpt-4-0125-Preview:
           deploymentName: gpt4-125-eastus
-    # Group-level configuration
-    - group: "mistral-inference"
-      apiKey: "AZURE_MISTRAL_API_KEY"   #${AZURE_MISTRAL_API_KEY}
-      baseURL: "https://Mistral-large-vnpet-serverless.region.inference.ai.azure.com/v1/chat/completions"
-      serverless: true
-      # Model-level configuration
-      models:
-        mistral-large: true
-    # Group-level configuration
-    - group: "my-resource-sweden"
-      apiKey: "SWEDEN_API_KEY"  #${SWEDEN_API_KEY}
-      instanceName: "my-resource-sweden"
-      deploymentName: gpt-4-1106-preview
+
+    # Group-level configuration for sweden-central
+    - group: "sweden-central"
+      apiKey: "68549945b64c4a22beeadcc72c34d2d2"  #${SWEDEN_API_KEY}
+      instanceName: "tharuka"
       version: "2024-03-01-preview"
       assistants: true
       # Model-level configuration
       models:
-        gpt-4-turbo: true
-
+        gpt-4-turbo-2024-04-09:
+          deploymentName: gpt4-turbo2024_04_09
+        gpt-4-1106-Preview:
+          deploymentName: gpt4-1106preview
+        dall-e-3:
+          deploymentName: Dalle3
 
   custom:
     # Groq Example
