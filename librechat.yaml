@@ -58,10 +58,7 @@ endpoints:
       instanceName: "tharuka-eastus"
       version: "2024-03-01-preview"   #CHECK THIS
       # Model-level configuration
-      models:
-        default: [
-          "gpt-4-0125-Preview"
-          ]      
+      models:      
         # gpt-4-vision-preview:
         #   deploymentName: gpt-4-vision-preview
         #   version: "2024-03-01-preview"
