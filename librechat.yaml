@@ -83,8 +83,8 @@ endpoints:
         gpt-35-turbo:
           deploymentName: gpt35-turbo-default
 
-        # dall-e-3:
-        #   deploymentName: Dalle3
+        dall-e-3:
+          deploymentName: Dalle3
 
   custom:
     # Groq Example
