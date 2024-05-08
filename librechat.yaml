@@ -53,7 +53,7 @@ endpoints:
     groups:
     # Group-level configuration
     - group: "my-resource-westus"
-      apiKey: "${WESTUS_API_KEY}"
+      apiKey: "WESTUS_API_KEY"  # ${WESTUS_API_KEY}
       instanceName: "my-resource-westus"
       version: "2024-03-01-preview"
       # Model-level configuration
@@ -67,7 +67,7 @@ endpoints:
           deploymentName: gpt-4-1106-preview
     # Group-level configuration
     - group: "mistral-inference"
-      apiKey: "${AZURE_MISTRAL_API_KEY}"
+      apiKey: "AZURE_MISTRAL_API_KEY"   #${AZURE_MISTRAL_API_KEY}
       baseURL: "https://Mistral-large-vnpet-serverless.region.inference.ai.azure.com/v1/chat/completions"
       serverless: true
       # Model-level configuration
@@ -75,7 +75,7 @@ endpoints:
         mistral-large: true
     # Group-level configuration
     - group: "my-resource-sweden"
-      apiKey: "${SWEDEN_API_KEY}"
+      apiKey: "SWEDEN_API_KEY"  #${SWEDEN_API_KEY}
       instanceName: "my-resource-sweden"
       deploymentName: gpt-4-1106-preview
       version: "2024-03-01-preview"
