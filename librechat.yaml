@@ -48,9 +48,9 @@ endpoints:
 
   azureOpenAI:
     # Endpoint-level configuration for Azure OpenAI
-    titleModel: "gpt-4-0125-Preview"
+    titleModel: "gpt-35-turbo"
     plugins: true
-    assistants: true
+    assistants: false
     titleConvo: true
     groups:
     # Group-level configuration for eastus
@@ -80,6 +80,9 @@ endpoints:
           deploymentName: gpt4-turbo2024_04_09
         gpt-4-1106-Preview:
           deploymentName: gpt4-1106preview
+        gpt-35-turbo:
+          deploymentName: gpt35-turbo-default
+
         dall-e-3:
           deploymentName: Dalle3
 
