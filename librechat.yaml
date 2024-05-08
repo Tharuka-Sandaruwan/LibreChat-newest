@@ -55,7 +55,7 @@ endpoints:
     groups:
     # Group-level configuration for eastus
     - group: "eastus"
-      apiKey: "77864c33a493405b91b4b70b56ae01cf"  # ${WESTUS_API_KEY}
+      apiKey: "addyourownkey"  # ${WESTUS_API_KEY}
       instanceName: "tharuka-eastus"
       version: "2024-03-01-preview"   #he Azure OpenAI API version https://learn.microsoft.com/en-us/azure/ai-services/openai/reference#:~:text=MM%2DDD%20format.-,Supported%20versions,-2022%2D12%2D01
       # Model-level configuration
@@ -70,7 +70,7 @@ endpoints:
 
     # Group-level configuration for sweden-central
     - group: "sweden-central"
-      apiKey: "68549945b64c4a22beeadcc72c34d2d2"  #${SWEDEN_API_KEY}
+      apiKey: "addyourownkey"  #${SWEDEN_API_KEY}
       instanceName: "tharuka"
       version: "2024-03-01-preview"
       assistants: true
