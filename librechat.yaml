@@ -1,13 +1,13 @@
 # For more information, see the Configuration Guide:
-# https://docs.librechat.ai/install/configuration/custom_config.html
+# https://www.librechat.ai/docs/configuration/librechat_yaml
 
 # Configuration version (required)
-version: 1.0.6
+version: 1.0.9
 
 # Cache settings: Set to true to enable caching
 cache: true
 
-# Custom nterface configuration
+# Custom interface configuration
 interface:
   # Privacy policy settings
   privacyPolicy:
@@ -25,22 +25,48 @@ registration:
   # allowedDomains:
   # - "gmail.com"
 
+# tts:
+#   url: ''
+#   apiKey: '${TTS_API_KEY}'
+#   model: ''
+#   backend: ''
+#   voice: ''
+#   compatibility: ''
+#   voice_settings:
+#     similarity_boost: ''
+#     stability: ''
+#     style: ''
+#     use_speaker_boost:
+#   pronunciation_dictionary_locators: ['']
+#  
+# stt:
+#   url: ''
+#   apiKey: '${STT_API_KEY}'
+#   model: ''
+
 # rateLimits:
 #   fileUploads:
 #     ipMax: 100
 #     ipWindowInMinutes: 60  # Rate limit window for file uploads per IP
 #     userMax: 50
 #     userWindowInMinutes: 60  # Rate limit window for file uploads per user
+#   conversationsImport:
+#     ipMax: 100
+#     ipWindowInMinutes: 60  # Rate limit window for conversation imports per IP
+#     userMax: 50
+#     userWindowInMinutes: 60  # Rate limit window for conversation imports per user
 
 # Definition of custom endpoints
 endpoints:
   # assistants:
   #   disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
-  #   pollIntervalMs: 750  # Polling interval for checking assistant updates
+  #   pollIntervalMs: 3000  # Polling interval for checking assistant updates
   #   timeoutMs: 180000  # Timeout for assistant operations
   #   # Should only be one or the other, either `supportedIds` or `excludedIds`
   #   supportedIds: ["asst_supportedAssistantId1", "asst_supportedAssistantId2"]
   #   # excludedIds: ["asst_excludedAssistantId"]
+  #   Only show assistants that the user created or that were created externally (e.g. in Assistants playground).
+  #   # privateAssistants: false # Does not work with `supportedIds` or `excludedIds`
   #   # (optional) Models that support retrieval, will default to latest known OpenAI models that support the feature
   #   retrievalModels: ["gpt-4-turbo-preview"]
   #   # (optional) Assistant Capabilities available to all users. Omit the ones you wish to exclude. Defaults to list below.
@@ -67,6 +93,8 @@ endpoints:
         #   deploymentName: gpt-35-turbo
         gpt-4-0125-Preview:
           deploymentName: gpt4-125-eastus
+        gpt-4o:
+          deploymentName: gpt4-0-auto-eastus
 
     # Group-level configuration for sweden-central
     - group: "sweden-central"
